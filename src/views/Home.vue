@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Current twitter count</h1>
+    <h2>Trump: {{twitterData.trump}}</h2>
+    <h2>Boris: {{twitterData.boris}}</h2>
+    <h2>Iran: {{twitterData.iran}}</h2>
+    <h2>Bitcoin: {{twitterData.bitcoin}}</h2>
+    <h2>Crypto: {{twitterData.crypto}}</h2>
+    <h2>Ethereum: {{twitterData.ethereum}}</h2>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-
+import { mapState } from 'vuex'
 export default {
   name: 'home',
-  components: {
-    HelloWorld,
+  data(){
+    return{
+
+    }
   },
+  computed:{
+    ...mapState(['twitterData'])
+  }
 };
 </script>
