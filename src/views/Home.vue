@@ -12,16 +12,17 @@
 
 <script>
 // @ is an alias to /src
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
+
 export default {
   name: 'home',
-  data(){
-    return{
+  data() {
+    return {
 
-    }
+    };
   },
-  computed:{
-    ...mapState(['twitterData'])
-  }
+  computed: {
+    ...mapState(['twitterData']),
+  },
 };
 </script>
